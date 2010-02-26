@@ -1,0 +1,18 @@
+<h1>New word</h1>
+
+
+        <% form_remote_tag(:url => {:action => :add_words, :category_id => params[:category_id] }) do %>
+        <p>
+            <%= text_field_tag :str %>
+            <%= submit_tag "Add Word" %>
+        </p>
+        <%end %>
+
+
+<p id='updated'></p>
+
+<% if params[:category_id] || params[:to_cat] %>
+<%= link_to 'Back', :controller => "categories", :master_id => params[:master_id] %>
+<%else%>
+<%= link_to 'Back', words_path %>
+<%end%>

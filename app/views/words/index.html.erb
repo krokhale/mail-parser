@@ -1,0 +1,23 @@
+<h1>Listing words</h1>
+
+<table>
+  <tr>
+    <th>Str</th>
+    <th>Category</th>
+  </tr>
+
+<% @words.each do |word| %>
+  <tr>
+    <td><%=h word.str %></td>
+    <td><%=h word.category_id %></td>
+    <td><%#= link_to 'Show', word, :to_list => true %></td>
+    <td><%#= link_to 'Edit', edit_word_path(word), :to_list => true %></td>
+    <td><%= link_to 'Destroy', word, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Add Synonyms',:controller => "synonyms",  :master_id => params[:master_id], :word_id => word.id, :category_id => params[:category_id]   %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Back', :controller => "categories", :master_id => params[:master_id] %>

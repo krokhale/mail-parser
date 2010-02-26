@@ -1,0 +1,23 @@
+<h1>Listing synonyms for:</h1>
+<h3> <%= @word.str%> </h3>
+
+<table>
+  <tr>
+    <th>Str</th>
+  </tr>
+
+<% @synonyms.each do |synonym| %>
+  <tr>
+    <td><%=h synonym.str %></td>
+    <td><%#= link_to 'Show', synonym %></td>
+    <td><%#= link_to 'Edit', edit_synonym_path(synonym) %></td>
+    <td><%= link_to 'Destroy', synonym, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New synonym', :controller => "synonyms", :action => :new,:master_id => params[:master_id], :word_id => params[:word_id], :category_id => params[:category_id]   %> <br /><br />
+
+<%= link_to 'Back', :controller => "words",:master_id => params[:master_id], :word_id => params[:word_id], :category_id => params[:category_id]   %>

@@ -1,0 +1,26 @@
+<h1>Listing Secondary and Tertiary for:</h1>
+<h3> <%= @master.name %> </h3>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%=h category.name %></td>
+    <td><%#= link_to 'Show', category %></td>
+    <td><%#= link_to 'Edit', edit_category_path(category) %></td>
+    <td><%#= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
+  <td><%= link_to 'Add Words', :controller => "words", :action => :new, :category_id => category.id, :master_id => params[:master_id] %></td>
+    <td><%= link_to 'Show Words', :controller => "words", :category_id => category.id, :master_id => params[:master_id] %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%#= link_to 'New category', new_category_path %>
+New category(Can be activated later if needed.) <br /> <br />
+<%= link_to 'Check Mails', :controller => "emails", :master_id => params[:master_id]  %><br />
+<%= link_to 'Back', :controller => "masters" %>

@@ -1,0 +1,15 @@
+<h1>New synonym</h1>
+
+
+
+        <% form_remote_tag(:url => {:action => :add_synonyms, :word_id => params[:word_id] }) do %>
+        <p>
+            <%= text_field_tag :str %>
+            <%= submit_tag "Add Synonym" %>
+        </p>
+        <%end %>
+
+
+<p id='updated'></p>
+
+<%= link_to 'Back', :controller => "synonyms",:master_id => params[:master_id], :word_id => params[:word_id], :category_id => params[:category_id]   %>

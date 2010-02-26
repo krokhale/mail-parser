@@ -1,0 +1,17 @@
+<p>
+  <b>Str:</b>
+  <%=h @word.str %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @word.category_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<% if params[:to_list] %>
+<%= link_to 'Back', :controller => "words", :category_id => @word.category_id, :master_id => params[:master_id] %>
+<% else %>
+<%= link_to 'Back', :controller => "words", :action => :new, :to_cat => true, :category_id => @word.category_id, :master_id => params[:master_id] %>
+<% end %>

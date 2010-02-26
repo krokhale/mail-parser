@@ -1,0 +1,24 @@
+<h1>Editing word</h1>
+
+<% form_for(@word) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :str %><br />
+    <%= f.text_field :str %>
+  </p>
+  <p>
+    <%= f.label :category_id %><br />
+    <%= f.text_field :category_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%#= link_to 'Show', @word %>
+<% if params[:to_list] %>
+<%= link_to 'Back', :controller => "words", :category_id => @word.category_id %>
+<% else %>
+<%= link_to 'Back', :controller => "words", :action => :show %>
+<% end %> 
