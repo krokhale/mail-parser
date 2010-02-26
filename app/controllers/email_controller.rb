@@ -1,11 +1,11 @@
 class EmailController < ApplicationController
-  def subject:string
+  def subject
   end
 
-  def body:string
+  def body
   end
 
-  def category_id:integer
+  def category_id
   end
 
 end
