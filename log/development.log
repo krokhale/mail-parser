@@ -7732,3 +7732,59 @@ Rendering rescues/layout (not_found)
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
   [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-07 08:19:19) [GET]
+
+ActionController::RoutingError (No route matches "/account" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-07 08:19:23) [GET]
+
+ActionController::RoutingError (No route matches "/accounts" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-07 08:20:02) [GET]
+
+ActionController::RoutingError (No route matches "/accounts" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-07 08:20:12) [GET]
+
+ActionController::RoutingError (No route matches "/accounts" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-07 08:20:27) [GET]
+
+ActionController::RoutingError (No route matches "/accounts" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-07 08:20:30) [GET]
+
+ActionController::RoutingError (No route matches "/account" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-07 08:20:32) [GET]
+
+ActionController::RoutingError (No route matches "/account" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
